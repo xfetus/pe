@@ -1,1 +1,6 @@
+## pycharm project path
 .idea
+## temporal files of assembly project in inventor
+**/OldVersions
+## ignores drawing temporal files of inventor
+**/lockfile.lck
