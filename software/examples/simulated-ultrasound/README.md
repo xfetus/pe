@@ -27,6 +27,15 @@ PlusServer.exe -–config-file=PlusDeviceSet_Server_SimulatedUltrasound_3DSlicer
 * In Slicer go to the Transforms module and modify the ProbeToTracker and NeedleToTracker transforms
 ![f](working.PNG)
 
+## Example: SimulatedUltrasound_Scene
+1. Open 3D slicer 
+2. Load the `SimulatedUltrasound_Scene.mrb` file by using add data into scene (once loaded zoom in/out) to see cad files.
+3. Go All Modules Menu to select `IGT > OpenIGTLinkIF` and check the status of Active and Persistent for server and client
+4. Open application `Plus Server Launcher`, select device set configuration directory  `~/us-simulator/software/examples/simulated-ultrasound`
+and for Device set select `Plus Server: Vascular needle insertion simulation` and click Launch server
+5. Go back to 3d slicer and chose in the All Module Menu transformation to play with translations and rotation of 
+its elements
+
 ## References 
 * https://plustoolkit.github.io/download.html
 * http://perk-software.cs.queensu.ca/plus/doc/nightly/user/ProcedureUltrasoundSimulation.html
