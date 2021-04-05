@@ -1,7 +1,7 @@
 # Meetings
 
 ## Mon  5 Apr 08:24:19 BST 2021
-Attendees: *Shu, Zhansong, Miguel*
+Attendees: *Shu, Zhanchong, Miguel*
 
 ### UPDATES
 
@@ -12,9 +12,10 @@ Attendees: *Shu, Zhansong, Miguel*
 
 * EVENT 
 	* June/July
-		* Number of printed fetus?
+		* Number of printed fetus with ecoflex00-30? 
+		* Time of printing of fetus
 		* Suvenirs/Packaging
-	* [Slides](../../documents/slides)  [PDF](https://github.com/ofetus/us-simulator/blob/pdfs/slides.pdf)
+	* LaTeX [Slides](../../documents/slides) and  [PDF](https://github.com/ofetus/us-simulator/blob/pdfs/slides.pdf)
 
 * BOM
 	* https://www.benam.co.uk/products/silicone/addition/ecoflex/ecoflex-00-30
@@ -55,7 +56,7 @@ TODO
 
 
 ## Fri 26 Feb
-Attendees: *Shu, Zhansong, Miguel*
+Attendees: *Shu, Zhanchong, Miguel*
 
 * Fetus moulds: 
 	* https://github.com/ofetus/FETUS/tree/main/fetal-model-set/3d-printing/fetus-mould/stl-files
