@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    if: "!contains(github.event.head_commit.message, 'SKIPCI')"
+    if: "contains(github.event.head_commit.message, 'BUILDCISLIDES'"
     runs-on: ubuntu-latest
     steps:
 
