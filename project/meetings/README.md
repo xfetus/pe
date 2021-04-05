@@ -22,12 +22,11 @@ Attendees: *Shu, Zhanchong, Miguel*
 	* https://www.amazon.co.uk/Formfutura-1-75mm-AquaSolve-Natural-Filament/dp/B01A93ZFH0/ref=sr_1_5?crid=18KGGT0KO6FUU&dchild=1&keywords=pva+filament+1.75mm&qid=1609587520&sprefix=pva+filamen%2Caps%2C1378&sr=8-5 
 
 
-
 ### Action Points
-* MX: Order 1 Galon Unit of ecoflex material as we will be able to print various models for the suvenirs
+* MX: Order 1 Galon Unit of ecoflex material as we will be able to print various models for the souvenirs
 * MX: Order 3 to 4 rolls for AquaSolve-Natural Filament 
 * MX: Updates slides
-* SW: Prepare instructions for printing fetus
+* SW: Prepare instructions for printing static fetus
 
 ### AOB 
 * ZO will be avaialble in June to do dynamic baby
