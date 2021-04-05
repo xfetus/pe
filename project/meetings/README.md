@@ -6,6 +6,10 @@ Attendees: *Shu, Zhansong, Miguel*
 
 ### UPDATES
 
+* FABRICATION
+	* [Static fetus](../../models/static-fetus/)
+	* [Packing models](../../models/static-fetus/3d-printing/fabrication/packaging) 
+	* [Movable fetus](../../models/moving-fetus/)
 
 * EVENT 
 	* June/July 
