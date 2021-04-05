@@ -1,6 +1,6 @@
 # Meetings
 
-## Mon  5 Apr 08:24:19 BST 2021
+## Mon  5 Apr 2021
 Attendees: *Shu, Zhanchong, Miguel*
 
 ### UPDATES
@@ -23,12 +23,14 @@ Attendees: *Shu, Zhanchong, Miguel*
 
 
 
-### TOCHECK 
-
+### Action Points
+* MX: Order 1 Galon Unit of ecoflex material as we will be able to print various models for the suvenirs
+* MX: Order 3 to 4 rolls for AquaSolve-Natural Filament 
+* MX: Updates slides
+* SW: Prepare instructions for printing fetus
 
 ### AOB 
-
-
+* ZO will be avaialble in June to do dynamic baby
 
 ## Wed 31 Mar 09:45:31 BST 2021
 Attendees: *Bella, Miguel*
