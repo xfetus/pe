@@ -1,6 +1,5 @@
 # Meetings
 
-
 ## Mon  5 Apr 08:24:19 BST 2021
 Attendees: *Shu, Zhansong, Miguel*
 
@@ -12,8 +11,10 @@ Attendees: *Shu, Zhansong, Miguel*
 	* [Movable fetus](../../models/moving-fetus/)
 
 * EVENT 
-	* June/July 
-	* Slides
+	* June/July
+		* Number of printed fetus?
+		* Suvenirs/Packaging
+	* [Slides](../../documents/slides)  [PDF](https://github.com/ofetus/us-simulator/blob/pdfs/slides.pdf)
 
 * BOM
 	* https://www.benam.co.uk/products/silicone/addition/ecoflex/ecoflex-00-30
