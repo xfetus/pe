@@ -12,8 +12,8 @@
    viewBox="0 0 317.496 105.832"
    version="1.1"
    id="svg8"
-   inkscape:version="1.0.2 (394de47547, 2021-03-26)"
-   sodipodi:docname="drawing-v00.svg">
+   inkscape:version="1.0.2 (1.0.2+r75+1)"
+   sodipodi:docname="drawing-v01.svg">
   <defs
      id="defs2">
     <clipPath
@@ -140,14 +140,14 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.11205px;line-height:1.25;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0370419"
-       x="-28.906046"
-       y="107.45821"
+       x="-15.979513"
+       y="138.92888"
        id="text51"><tspan
          sodipodi:role="line"
-         x="-28.906046"
-         y="107.45821"
+         x="-15.979513"
+         y="138.92888"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:50.8px;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;stroke-width:0.0370419"
-         id="tspan838">v00</tspan></text>
+         id="tspan838">v01</tspan></text>
     <text
        id="text55"
        y="175.73384"
@@ -173,21 +173,26 @@
     <ellipse
        style="opacity:0.658783;fill:#0000ff;fill-opacity:0.594926;stroke:#ffff00;stroke-width:0.141933;stroke-linejoin:round"
        id="path39"
-       cx="279.17828"
-       cy="233.86299"
+       cx="284.76047"
+       cy="229.09828"
        rx="19.860622"
        ry="19.429743" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:10.5832px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458"
-       x="240.59132"
-       y="272.76147"
+       style="font-style:normal;font-weight:normal;font-size:10.5832px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458"
+       x="290.77963"
+       y="267.38007"
        id="text43"><tspan
          sodipodi:role="line"
          id="tspan41"
-         x="240.59132"
-         y="272.76147"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;stroke-width:0.26458">Name Surname</tspan></text>
+         x="290.77963"
+         y="267.38007"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:center;text-anchor:middle;stroke-width:0.26458">Name </tspan><tspan
+         sodipodi:role="line"
+         x="290.77963"
+         y="281.11417"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:center;text-anchor:middle;stroke-width:0.26458"
+         id="tspan46">Surname</tspan></text>
     <ellipse
        style="opacity:0.658783;fill:#0000ff;fill-opacity:0.594926;stroke:#ffff00;stroke-width:0.142226;stroke-linejoin:round"
        id="circle45"
@@ -221,25 +226,43 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:10.5832px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458"
-       x="159.74794"
-       y="260.29105"
+       x="214.83377"
+       y="259.15924"
        id="text56"><tspan
          sodipodi:role="line"
          id="tspan53"
-         x="159.74794"
-         y="260.29105"
+         x="214.83377"
+         y="259.15924"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:center;text-anchor:middle;stroke-width:0.26458">Miguel</tspan><tspan
          sodipodi:role="line"
-         x="159.74794"
-         y="274.02518"
+         x="214.83377"
+         y="272.89334"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:center;text-anchor:middle;stroke-width:0.26458"
          id="tspan60">Xochicale</tspan></text>
     <ellipse
        style="opacity:0.658783;fill:#0000ff;fill-opacity:0.594926;stroke:#ffff00;stroke-width:0.142226;stroke-linejoin:round"
        id="ellipse58"
-       cx="158.76579"
-       cy="227.41821"
+       cx="213.85162"
+       cy="226.28639"
        rx="19.43119"
        ry="19.941214" />
+    <ellipse
+       style="opacity:0.658783;fill:#0000ff;fill-opacity:0.594926;stroke:#ffff00;stroke-width:0.141933;stroke-linejoin:round"
+       id="ellipse40"
+       cx="157.29802"
+       cy="230.41418"
+       rx="19.860622"
+       ry="19.429743" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5832px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458"
+       x="131.44038"
+       y="269.52365"
+       id="text44"><tspan
+         sodipodi:role="line"
+         id="tspan42"
+         x="131.44038"
+         y="269.52365"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;stroke-width:0.26458">Fang-Yu Lin</tspan></text>
   </g>
 </svg>
