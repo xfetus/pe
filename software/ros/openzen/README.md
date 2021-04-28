@@ -1,22 +1,28 @@
 # OpenZenROS
 
-## References
-https://bitbucket.org/lpresearch/openzenros/src/master/     
-https://lpresearch.bitbucket.io/openzen/latest/ros.html#compilation     
-
-
-# test your LPMSB2 with openzen
+## Download openzen and test LPMSB2 sensors
+1. Run [download-openzen.bash](download-openzen.bash)
 ```
-mkdir ~/Desktop/sandbox && cd ~/Desktop/sandbox
-sudo apt-get install gcc-7
-git clone --recurse-submodules https://bitbucket.org/lpresearch/openzen.git
-cd openzen
-mkdir build && cd build && cmake .. #Create a build folder and run cmake:
-make -j4 #&& examples/OpenZenExample # Compile and run the OpenZenExample:
+bash download-openzen.bash
+```
+if successful, you will see the following output:
+```
+.
+.
+.
+[ 96%] Linking CXX executable OpenZenExample
+[ 96%] Built target OpenZenExample
+[ 97%] Building CXX object CMakeFiles/OpenZenTests.dir/src/test/streaming/SerializationTest.cpp.o
+[ 98%] Building CXX object CMakeFiles/OpenZenTests.dir/src/test/OpenZenTests.cpp.o
+[100%] Linking CXX executable OpenZenTests
+[100%] Built target OpenZenTests
 ```
 
-```
-/build/examples$ ./OpenZenExample
+2. Test connected LPMSB2 sensors
+Connect USB blutooth dongle and wwitch on LPMSB2 sensors. Then type the following lines in the terminal:
+``` 
+cd $HOME/Desktop/sandbox/openzen/build/examples
+./OpenZenExample
 Listing sensors:
 [2020-11-08 19:43:38.011] [OpenZen_console] [info] Starting listing of Bluetooth devices
 0: LPMSB2-53ED5B (Bluetooth)
@@ -26,20 +32,20 @@ Provide an index within the range 0-1:
 
 Reference: https://bitbucket.org/lpresearch/openzen/src/master/
 
-# build ros package 
+## build ros package 
 ```
 cd && mkdir -p catkin_ws/src && cd catkin_ws/src
 git clone --recurse-submodules https://bitbucket.org/lpresearch/openzenros.git
-# in CMakeList.txt L32 change/save the following flag to ON:  SET(ZEN_BLUETOOTH OFF CACHE BOOL "Don't build bluetooth")
+# in ~/catkin_ws/src/openzenros/CMakeList.txt LINE32 change/save the "OFF" flag to ON:  SET(ZEN_BLUETOOTH "OFF" CACHE BOOL "Don't build bluetooth")
 cd ~/catkin_ws
 rm -rf build devel install
-catkin_make #-DCMAKE_C_COMPILER=gcc-7 -DCMAKE_CXX_COMPILER=g++-7
+cd ~/catkin_ws && catkin_make #-DCMAKE_C_COMPILER=gcc-7 -DCMAKE_CXX_COMPILER=g++-7
 rospack profile #https://stackoverflow.com/questions/27053334/ros-package-not-found-after-catkin-make
 ```
 
 
-## check the macs for your imus:
-Turn on your LPMSVB2
+### check the macs address of your LPMSVB2 imus:
+1. Connect bluetooth dongle and switch on your LPMSVB2 
 ```
 $hcitool dev
 Devices:
@@ -52,18 +58,18 @@ Scanning ...
 ```
 
 
-## testing one sensor 
-
+### testing one sensor 
+1. Launch roscore
 ```
 roscore
 ```
-
+2. Launch nodes
 ```
 rosrun openzen_sensor openzen_sensor_node _sensor_interface:="Bluetooth" _sensor_name:="00:04:3E:53:ED:58"
 #rosrun openzen_sensor openzen_sensor_node _sensor_name:="LPMSB2-53ED58"
 #rosrun openzen_sensor openzen_sensor_node _sensor_interface:="LinuxDevice" _sensor_name:="00:04:3E:53:ED:58"
 ```
-
+3. List ros topics
 ```
 $ rostopic list
 /imu/data
@@ -73,7 +79,8 @@ $ rostopic list
 /rosout_agg
 ```
 
-* open a new terminal to test available axis
+4. Plot values
+open a new terminal to test available axis
 ```
 rosrun rqt_plot rqt_plot /imu/data/linear_acceleration/x:y:z
 rosrun rqt_plot rqt_plot /imu/data/orientation/w:x:y:z
@@ -82,20 +89,18 @@ rosrun rqt_plot rqt_plot /imu/mag/magnetic_field/x:y:z
 ```
 
 
-## two sensors
-
+### two sensors
+1. Launch roscore
 ```
 roscore
 ```
-
+2. Open two terminal to run nodes
 ```
 rosrun openzen_sensor openzen_sensor_node __name:="nameimu1" _sensor_interface:="Bluetooth" _sensor_name:="00:04:3E:53:ED:58" imu:=/imu1
 rosrun openzen_sensor openzen_sensor_node __name:="nameimu2" _sensor_interface:="Bluetooth" _sensor_name:="00:04:3E:53:ED:5B" imu:=/imu2
 ```
 
-
-output
-
+terminal output
 ```
 rosrun openzen_sensor openzen_sensor_node __name:="nameimu1" _sensor_interface:="Bluetooth" _sensor_name:="00:00:00:00:00:00" imu:=/imu1
 [ INFO] [1606675676.492008480]: Connecting directly to sensor 00:00:00:00:00:00 over interface Bluetooth
@@ -105,9 +110,8 @@ rosrun openzen_sensor openzen_sensor_node __name:="nameimu1" _sensor_interface:=
 ```
 
 
-
-
-* open a new terminal to test available axis
+3. List topics
+open a new terminal to test available axis
 ```
 rostopic list
 /imu1/data
@@ -121,25 +125,30 @@ rostopic list
 
 ```
 
+4. Plot variables of imus
 ```
 rosrun rqt_plot rqt_plot /imu1/data/linear_acceleration/x:y:z /imu2/data/linear_acceleration/x:y:z
-
 ```
 
 
-## Lauch 
-
-* one sensor 
+### Launch files
+0. Copy launch files
+```  
+cp $HOME/Desktop/us-simulator/software/ros/openzen/launch_files/*.launch $HOME/catkin_ws/src/openzenros/launch
+```
+1. one sensor 
 ```
 roslaunch openzen_sensor openzen_lpms_b2_one.launch
 ```
 
-*  two sensors
-
-
+2. two sensors
 ```
 roslaunch openzen_sensor openzen_lpms_b2_two.launch 
 ```
 ```
 rosrun rqt_plot rqt_plot /imu1/imu/data/linear_acceleration/x:y:z /imu2/imu/data/linear_acceleration/x:y:z
 ```
+
+## References
+https://bitbucket.org/lpresearch/openzenros/src/master/     
+https://lpresearch.bitbucket.io/openzen/latest/ros.html#compilation     
