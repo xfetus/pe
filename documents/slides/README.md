@@ -19,3 +19,23 @@ more: https://github.com/free-cortex/framework/tree/main/workflow
 
 ## local build
 make clean && make && evince main.pdf
+
+## Dependencies 
+* https://github.com/pdfpc/pdfpc
+```
+sudo apt-get install pdf-presenter-console
+```
+
+## view slides 
+``` 
+cd $HOME/~/FETUS/us-simulator/documents/slides
+# use -w to run in windowed mode
+pdfpc -w main.pdf
+```
+
+"This is the command I used to start pdfpc having the speaker and presentation windows with the countdown timer set at 3 minutes and a warning time of 1 minutes."
+```
+pdfpc -w both -d 3 -l 1 main.pdf
+```
+
+

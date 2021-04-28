@@ -30,4 +30,4 @@ mostlyclean:
 
 clean: mostlyclean
 	$(LATEXMK) -silent -c
-	$(RM) main.pdf *.bbl *.run.xml -rf _minted-main *.pyg example.out
+	$(RM) main.pdf main.pdfpc *.bbl *.run.xml -rf _minted-main *.pyg example.out
