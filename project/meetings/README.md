@@ -1,4 +1,21 @@
-# Meetings
+# Meetings minutes
+
+## Thu 29 Apr 09:48:48 BST 2021
+Attendees: *Bella, Miguel*
+### UPDATES
+* LaTeX [Slides](../../documents/slides) and  [PDF](https://github.com/ofetus/us-simulator/blob/pdfs/slides.pdf)
+* Completed POs 
+* Starting test of the printing next week
+
+## Notes
+* Potential day to do PE activities will be 6th of July for the KHP summer school. Around 40 participants will be presented!
+
+### Action Points
+* Update slides to be more a collaborative workshop (raise questions to engageme participans in the dialogue) 
+
+### AOB 
+* Next meeting will be in two weeks' time
+
 
 ## Mon  5 Apr 2021
 Attendees: *Shu, Zhanchong, Miguel*
