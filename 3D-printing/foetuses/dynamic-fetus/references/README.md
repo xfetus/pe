@@ -1,9 +1,9 @@
-# construction
+# Construction
 
 ## images
 ![fig](models.png)
 
-## Instrustions
+## Instrustions _by Shu Wang_
 1. Convert the baby model from fbx to stl----need to download Autodesk Maya;
 2. Make a negative mould based on the baby phantom—external one, PLA;
 2.1. Use the reference internal mould (half)– internal one, PVA;
