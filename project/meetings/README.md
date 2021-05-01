@@ -1,5 +1,22 @@
 # Meetings minutes
 
+## Sat  1 May 09:58:25 BST 2021
+Attendees: *Shu, Zhanchong, Miguel*
+
+### UPDATES 
+* LaTeX [Slides](../../documents/slides) and  [PDF](https://github.com/ofetus/us-simulator/blob/pdfs/slides.pdf)
+* BOM is ready
+
+### Notes 
+* Babies of w6 and w7 might be hard to be printed as the size is 5mm (too low for 3Dpriting)
+
+### Actions
+* SW will send molds for fetus and packaging 
+* MX will do the initial printings. 
+
+### AOB 
+* ZO might have some time in June
+
 ## Thu 29 Apr 09:48:48 BST 2021
 Attendees: *Bella, Miguel*
 ### UPDATES
