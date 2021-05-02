@@ -1,4 +1,4 @@
-# Integration
+# Integration of CAD-models
 
-## Figures 
-[![fig](screenshot-2020-08-13%2005-09-13.png)
+## Prob of concept 
+![fig](prob-of-concept/screenshot-2020-08-13%2005-09-13.png)
