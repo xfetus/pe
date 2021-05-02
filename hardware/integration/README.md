@@ -1,3 +1,4 @@
-# Integreation
+# Integration
 
-![fig](screenshot-2020-08-13 05-09-13.jpg)
+## Figures 
+[![fig](screenshot-2020-08-13%2005-09-13.png)
