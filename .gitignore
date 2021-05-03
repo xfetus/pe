@@ -4,3 +4,6 @@
 **/OldVersions
 ## ignores drawing temporal files of inventor
 **/lockfile.lck
+
+## temporal files of freeCAD projects
+**/*.FCStd1
