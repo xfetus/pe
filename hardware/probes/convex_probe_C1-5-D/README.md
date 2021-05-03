@@ -5,7 +5,7 @@ and [#5](https://github.com/gift-surg/us-needle-tracking-verification/issues/5) 
 
 ## Foot print 
 The foot print of the C1-5-D probe is 69.3X17.2mm (Voluson E10 Datasheet). However, dimension measurements are shown below
-![fig](c15d-dimensions-2020-07-21.PNG)
+![fig](figures/probe-measuraments/versions/drawing.png)
 
 ## CAD
 * c15d-cad-v00.ipt
