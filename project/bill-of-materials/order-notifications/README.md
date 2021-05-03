@@ -5,4 +5,6 @@ Qty: 1 - RS White PLA 1.75mm Filament 1kg
 Qty: 2 - RS PRO - PVA 1,75mm natural, 1 kg
 Qty: 2 - 9-Axis IMU with bluetooth 2.1
 
+![f](my_photo-2.jpg)
+
 
