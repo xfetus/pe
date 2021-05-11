@@ -7,3 +7,6 @@
 
 ## temporal files of freeCAD projects
 **/*.FCStd1
+
+## temporal vim files
+**/*.md.swp
