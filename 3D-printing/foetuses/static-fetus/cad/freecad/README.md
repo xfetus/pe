@@ -1,6 +1,3 @@
 # Models of the fetus 
 
-![fig](screenshot-2020-08-13-04-51-52.png)
-
-![fig](screenshot-2021-01-27-00-07-53.png)
-
+![fig](Screenshot%20from%202021-05-14%2016-23-20.png)
