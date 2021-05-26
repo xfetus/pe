@@ -71,3 +71,38 @@ pdfpc -w both -d 3 -l 1 main.pdf
     * `make` 
     * cygstart.exe main.pdf #to view pdf
     * `make clean`
+    
+
+## Figures workflow using vector images
+To create figures using vector files with inkscape, the following template is used 
+where vectors path has svg files, `drawing-vNN.svg` where NN is the number of version, 
+reference for other images and versions for png or pdf outputs. See one example of
+ the path organisation:
+```
+.
+├── Makefile
+├── README.md
+├── references
+│   └── README.md
+├── vectors
+│   └── drawing-v00.svg
+│   └── drawing-v01.svg
+└── versions
+    ├── drawing-v00.png
+    ├── drawing-v01.png
+    └── README.md
+```
+When creating a new version, modify `/vectors/drawing-v00.svg` 
+and use the latest version for instance, a copy of v02 to create for instance v03.
+
+### GNU/Linux users:
+Type the following in the terminal
+```
+make
+mv versions/drawing.png versions/drawing-vNN.png #todo: add this in the makefile
+```
+
+### Windows users:
+open /svgpath/drawing.svg with inkscape using the explorer to make modifications (use `explorer .` in Cygwin)
+Then go to the menu `File>Export PNG image...>[page]` export the figure. 
+In such window select path and filename to be, for instance, `/versions/drawing-v03.png` and click Export
