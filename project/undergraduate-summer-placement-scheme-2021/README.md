@@ -6,6 +6,10 @@ The use of ultrasound to identify the anatomy of fetus (head, eyes, heart, lungs
 Miguel Xochicale  
 miguel.xochicale@kcl.ac.uk 
 
+## Student Name 
+Amal Hussein   
+amal.1.hussein@kcl.ac.uk
+
 ## Suggested Project Duration in Weeks
 Six Weeks  
 Week 1: Literature review and installation of software dependencies    
