@@ -8,12 +8,12 @@ miguel.xochicale@kcl.ac.uk
 
 ## Suggested Project Duration in Weeks
 Six Weeks  
-Week 1: Literature review and installation of software dependencies  
-Week 2: Replication and polished of CAD design for convex probe
-Week 3: Adding CAD for inertial sensors
-Week 4: 3D printing of the simulated Ultrasound models   
-Week 5: Testing the simulator in Slicer
-Week 6: Wrap up and write up of short report  
+Week 1: Literature review and installation of software dependencies    
+Week 2: Replication and polished of CAD design for convex probe   
+Week 3: Adding CAD for inertial sensors   
+Week 4: 3D printing of the simulated Ultrasound models    
+Week 5: Testing the simulator in Slicer   
+Week 6: Wrap up and write up of short report    
 
 ## Skills Developed during Project.
 3D printing, Learning architectures, 
