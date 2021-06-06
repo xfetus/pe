@@ -3,7 +3,7 @@
 ## Clone repo
 After generating your SSH keys as suggested [here](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent), you can then clone the repository by typing (or copying) the following line in a terminal at your selected path in your machine:
 ```
-git clone git@github.com:ofetus/us-simulator.git
+git clone git@github.com:xfetus/us-simulator.git
 ```
 
 ## Team
