@@ -15,9 +15,31 @@
 \usepackage{tikzpagenodes}
 \usetikzlibrary{positioning}
 
+%%% FONTS
+\usefonttheme{serif}
 
 % table related packages
 \usepackage{array}
+
+%% Colours
+\definecolor{foreground}{RGB}{255,255,255}
+\definecolor{background}{RGB}{24,24,24}
+\definecolor{title}{RGB}{107,174,214}
+\definecolor{gray}{RGB}{155,155,155}
+\definecolor{subtitle}{RGB}{102,255,204}
+\definecolor{hilight}{RGB}{102,255,204}
+\definecolor{vhilight}{RGB}{255,111,207}
+
+\setbeamercolor{titlelike}{fg=title}
+\setbeamercolor{subtitle}{fg=subtitle}
+\setbeamercolor{institute}{fg=gray}
+\setbeamercolor{normal text}{fg=foreground,bg=background}
+
+\setbeamercolor{item}{fg=foreground} % color of bullets
+\setbeamercolor{subitem}{fg=gray}
+\setbeamercolor{itemize/enumerate subbody}{fg=gray}
+
+
 
 %---------------------------------------------------------------------
 % custom commands
@@ -103,13 +125,22 @@
 %---------------------------------------------------------------------
 \usenavigationsymbolstemplate{} % hides small icons in bottom right corner use to navigate the presentation
 \setbeamertemplate{footline}
-{%
-\begin{beamercolorbox}[wd=\textwidth,ht=3ex,dp=1.5ex,leftskip=0.3cm,rightskip=0.3cm]{structure}%
-\usebeamerfont{page number in head/foot}%
-\hfill\insertframenumber%
-\end{beamercolorbox}%
+{
+
+%\begin{beamercolorbox}[wd=\textwidth,ht=3ex,dp=1.5ex,leftskip=0.3cm,rightskip=0.3cm]{structure}%
+%\usebeamerfont{page number in head/foot}%
+%\hfill\insertframenumber%
+%\end{beamercolorbox}
+
+    \raisebox{5pt}{\makebox[\paperwidth]{
+        \hfill\makebox[20pt]{
+            \color{gray}
+            \scriptsize\insertframenumber}
+    }
+    }
 }
 
+%\hspace*{5pt}}
 
 %---------------------------------------------------------------------
 % Add Paper using {\paper{}. begin{beawer} ... end{beamer} }
@@ -119,7 +150,12 @@
 	{
 		\begin{beamercolorbox}[wd=\textwidth,ht=3mm,dp=03mm,leftskip=0.3cm,rightskip=0.3cm]{black}%
         		\usebeamerfont{page number in head/foot}
-			[#1]\mbox{}\hfill\insertframenumber
+                \color{gray}
+                [#1]\mbox{}
+                \color{gray}
+                \scriptsize
+                \hfill
+                \insertframenumber
 		\end{beamercolorbox}%
 	}
 }
