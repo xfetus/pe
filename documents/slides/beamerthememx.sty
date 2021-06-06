@@ -34,18 +34,20 @@
 \setbeamercolor{subtitle}{fg=subtitle}
 \setbeamercolor{institute}{fg=gray}
 \setbeamercolor{normal text}{fg=foreground,bg=background}
+\setbeamercolor{section in toc}{fg=subtitle}
 
 \setbeamercolor{item}{fg=foreground} % color of bullets
 \setbeamercolor{subitem}{fg=gray}
 \setbeamercolor{itemize/enumerate subbody}{fg=gray}
 
-
+\setbeamertemplate{section in toc}{\hspace*{1em}\inserttocsectionnumber.~\inserttocsection\par}
+\setbeamertemplate{subsection in toc}{\hspace*{2em}\inserttocsectionnumber.\inserttocsubsectionnumber.~\inserttocsubsection\par}
 
 %---------------------------------------------------------------------
 % custom commands
 %---------------------------------------------------------------------
-\newcommand{\githubrepository}[1]{»#1«}
-
+\newcommand{\@githubrepository}{}
+\newcommand{\githubrepository}[1]{\def\@githubrepository{#1}}
 
 % Titlepage structure
 \def\maketitle{\ifbeamer@inframe\titlepage\else{\setbeamertemplate{background}{}\frame[plain]{\titlepage}}\fi}
@@ -96,11 +98,10 @@
 
 
     \begin{tikzpicture}[overlay, remember picture]
-    \node[%
+    \node[
       above right=0.35cm and -0.2cm of current page footer area.south west,
       anchor=south west,
-      inner sep=-10pt] {%
-%      \usebeamerfont{footline}
+      inner sep=-10pt] {
     \fontsize{4pt}{7.2}\selectfont
       \begin{tabular}{lm{.8\textwidth}}
         \href{http://creativecommons.org/licenses/by/4.0/}{\ccby} &
@@ -108,13 +109,13 @@
 	\href{http://creativecommons.org/licenses/by/4.0/}
 		{Creative Commons ``Attribution 4.0 International''} license.
 	\par Get source of this slides and see further references
-		from \url{https://github.com/ofetus/us-simulator}
+		from \url{\@githubrepository}
       \end{tabular}
     };
-    \node[%
+    \node[
       above left=0.35cm and 0cm of current page footer area.south east,
       anchor=south east,
-      inner sep=0pt]{\qrcode[height=1.5cm]{https://github.com/ofetus/us-simulator}};
+      inner sep=0pt]{\qrcode[height=1.5cm]{\@githubrepository}};
     \end{tikzpicture}
 
 }
