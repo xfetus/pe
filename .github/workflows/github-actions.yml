@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - main
+      - 01-final-run-through
       - $ADD_ISSUENUMER_NAME
 
 jobs:
