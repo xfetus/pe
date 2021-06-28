@@ -4,7 +4,21 @@ visualization and medical image computing.
 Github: https://github.com/Slicer  
 Website: https://download.slicer.org   
 
-## Installation
+## Windows Installation
+Download the latest version of slicer from https://download.slicer.org/
+```
+version 4.11.20210226
+revision 29738
+built 2021-03-01
+``` 
+Destination folder: `C:\Users\mx19\AppData\Local\NA-MIC\Slicer 4.11.20210226`
+
+### How to uninstall Slicer?
+On Windows, choose "Uninstall" option from the Start menu.
+https://www.slicer.org/wiki/Documentation/4.4/FAQ#How_to_uninstall_Slicer.3F 
+
+
+
 * Firewall alerts 
 ![f](figures/firewall-networks-b-3d-slicer.PNG)
 ![f](figures/firewall-networks-a-3d-slicer.PNG)
