@@ -15,13 +15,13 @@ Destination folder: `C:\Users\mx19\AppData\Local\NA-MIC\Slicer 4.11.20210226`
 
 ### How to uninstall Slicer?
 On Windows, choose "Uninstall" option from the Start menu.
-https://www.slicer.org/wiki/Documentation/4.4/FAQ#How_to_uninstall_Slicer.3F 
+https://www.slicer.org/wiki/Documentation/4.4/FAQ#How_to_uninstall_Slicer.3F    
 
+* Firewall alerts       
+![f](figures/firewall-networks-b-3d-slicer.PNG)   
+![f](figures/firewall-networks-a-3d-slicer.PNG)   
+  
 
-
-* Firewall alerts 
-![f](figures/firewall-networks-b-3d-slicer.PNG)
-![f](figures/firewall-networks-a-3d-slicer.PNG)
 ## Installation of Slicer Extensions
 Slides: https://onedrive.live.com/view.aspx?resid=7230D4DEC6058018!3101&ithint=file%2cpptx&authkey=!AAUo9vahA2-tB7g
 ### SlicerOpenIGTLink
