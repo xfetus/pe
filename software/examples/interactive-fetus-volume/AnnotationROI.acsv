@@ -1,4 +1,4 @@
-# Annotation file C:/Users/mx19/Desktop/test-volumen/AnnotationROI.acsv
+# Annotation file C:/Users/mx19/Desktop/github-repos/us-simulator/software/examples/interactive-fetus-volume/AnnotationROI.acsv
 # Name = AnnotationROI
 # textVisibility = 1
 # textColor = 0.7373,0.2549,0.1098
@@ -22,8 +22,8 @@
 # pointGlyphScale = 5
 # pointGlyphType = 13
 # pointColumns = type|x|y|z|sel|vis
-point|33.9966|20.6945|31.65|1|1
-point|45.9912|23.1243|40.4588|1|1
+point|31.9719|19.2|35.9863|1|1
+point|64.2837|33.6565|50.9751|1|1
 # lineVisibility = 1
 # lineColor = 0.7373,0.2549,0.1098
 # lineSelectedColor = 0.2667,0.6745,0.3922
