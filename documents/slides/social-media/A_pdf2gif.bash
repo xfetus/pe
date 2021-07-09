@@ -13,7 +13,7 @@ convert -density 500 *.pdf -strip -resize @1048576 PNG8:slide-%02d.png
 
 # png2gif
 echo '(3) png2gif'
-convert -layers OptimizePlus -delay 75 slide-??.png -loop 0 slides.gif
+convert -layers OptimizePlus -delay 75 slide-??.png -loop 0 outputs/slides.gif
 ## delay 50 in each slides and then loop it! 
 
 #convert -layers OptimizePlus -delay 75 slide-0?.png slide-1[01234].png -delay 300 slide-1[567].png -loop 0 slides.gif
