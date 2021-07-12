@@ -14,10 +14,16 @@ amal.1.hussein@kcl.ac.uk
 Six Weeks  
 Week 1 [07June2021]: Literature review and installation of software dependencies    
 Week 2 [14June2021]: Replication and polished of CAD design for convex probe   
-Week 3 [21June2021]: Adding CAD for inertial sensors   
-Week 4 [28June2021]: 3D printing of the simulated Ultrasound models    
-Week 5 [05July2021]: Testing the simulator in Slicer   
-Week 6 [12July2021]: Wrap up and write up of short report
+Week 3 [21June2021]: Polishing CAD design for convex probe   
+Week 4 [28June2021]: Polishing CAD design for convex probe        
+Week 5 [05July2021]: Polishing CAD design for convex probe   
+Week 6 [12July2021]: Generation of CAD design for 3D printing  
+Week 7 [19July2021]: 3D printing of the simulated Ultrasound models  
+Week 8 [26July2021]: Wrap up and write up of short report     
+
+Extras: 
+* Adding CAD for inertial sensors  
+* Testing the simulator in Slicer
 
 ## Skills Developed during Project.
 3D printing, Learning architectures, 
