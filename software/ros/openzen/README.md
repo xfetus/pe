@@ -1,4 +1,4 @@
-# OpenZenROS
+# OpenZenROS under Ubuntu 20.04x64
 
 ## Download openzen and test LPMSB2 sensors
 1. Run [download-openzen.bash](download-openzen.bash)
@@ -82,10 +82,10 @@ $ rostopic list
 4. Plot values
 open a new terminal to test available axis
 ```
-rosrun rqt_plot rqt_plot /imu/data/linear_acceleration/x:y:z
-rosrun rqt_plot rqt_plot /imu/data/orientation/w:x:y:z
-rosrun rqt_plot rqt_plot /imu/data/angular_velocity/w:x:y:z
-rosrun rqt_plot rqt_plot /imu/mag/magnetic_field/x:y:z
+rqt_plot rqt_plot /imu/data/linear_acceleration/x:y:z
+rqt_plot rqt_plot /imu/data/orientation/w:x:y:z
+rqt_plot rqt_plot /imu/data/angular_velocity/w:x:y:z
+rqt_plot rqt_plot /imu/mag/magnetic_field/x:y:z
 ```
 
 
@@ -127,15 +127,29 @@ rostopic list
 
 4. Plot variables of imus
 ```
-rosrun rqt_plot rqt_plot /imu1/data/linear_acceleration/x:y:z /imu2/data/linear_acceleration/x:y:z
+rqt_plot rqt_plot /imu1/data/linear_acceleration/x:y:z /imu2/data/linear_acceleration/x:y:z
 ```
 
 
 ### Launch files
-0. Copy launch files
-```  
-cp $HOME/Desktop/us-simulator/software/ros/openzen/launch_files/*.launch $HOME/catkin_ws/src/openzenros/launch
+
+00. Deactiave conda environments
 ```
+conda deactivate
+```
+
+0. Copy launch files
+```
+cd ~/public-engagement-project/software/ros/openzen/launch_files
+pwd
+```
+```
+cd $HOME/catkin_ws/src/openzenros/launch
+```
+```
+cp $PWD/*.launch .
+```
+
 1. one sensor 
 ```
 roslaunch openzen_sensor openzen_lpms_b2_one.launch
@@ -145,8 +159,9 @@ roslaunch openzen_sensor openzen_lpms_b2_one.launch
 ```
 roslaunch openzen_sensor openzen_lpms_b2_two.launch 
 ```
+
 ```
-rosrun rqt_plot rqt_plot /imu1/imu/data/linear_acceleration/x:y:z /imu2/imu/data/linear_acceleration/x:y:z
+rqt_plot rqt_plot /imu1/imu/data/linear_acceleration/x:y:z /imu2/imu/data/linear_acceleration/x:y:z
 ```
 
 ## References

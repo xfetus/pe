@@ -1,0 +1,34 @@
+<launch>
+    	<!-- B2 Sensor node -->
+    	<node 
+		name="b2_node" 
+		pkg="openzen_sensor" 
+		type="openzen_sensor_node">
+    		<param name="sensor_interface" value="Bluetooth" />  
+    		<param name="sensor_name" value="00:04:3E:53:ED:58" />  
+	</node>
+
+
+	<!-- Quaternion to Euler conversion node -->
+	<node 
+		name="quat_to_euler" 
+		pkg="topic_tools" 
+		type="transform"
+        	args="	/imu/data/orientation 
+			/rpy_angles geometry_msgs/Vector3 
+			'tf.transformations.euler_from_quaternion([m.x, m.y, m.z, m.w])' 
+			--import tf
+		" 
+	/>
+ 
+	
+	<!-- Plots -->
+	<node 
+		name="plot_imu_euler" 
+		pkg="rqt_plot" 
+		type="rqt_plot"
+		args="/rpy_angles" 
+	/>
+
+
+</launch>
