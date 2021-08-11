@@ -1,6 +1,6 @@
 # OpenZenROS under Ubuntu 20.04x64
 
-## Download openzen and test LPMSB2 sensors
+## 1. Download openzen and test LPMSB2 sensors
 1. Run [download-openzen.bash](download-openzen.bash)
 ```
 bash download-openzen.bash
@@ -44,21 +44,26 @@ rospack profile #https://stackoverflow.com/questions/27053334/ros-package-not-fo
 ```
 
 
+
+
+
+## 2. Testing sensors
+
 ### check the macs address of your LPMSVB2 imus:
 1. Connect bluetooth dongle and switch on your LPMSVB2 
 ```
-$hcitool dev
+hcitool dev
 Devices:
 	hci0	00:1A:7D:DA:71:13
 
-$ hcitool scan
+hcitool scan
 Scanning ...
 	00:04:3E:53:ED:58	LPMSB2-53ED58
 	00:04:3E:53:ED:5B	LPMSB2-53ED5B
 ```
 
+### One Sensor
 
-### testing one sensor 
 1. Launch roscore
 ```
 roscore
@@ -89,7 +94,7 @@ rqt_plot rqt_plot /imu/mag/magnetic_field/x:y:z
 ```
 
 
-### two sensors
+### Two sensors
 1. Launch roscore
 ```
 roscore
@@ -131,14 +136,13 @@ rqt_plot rqt_plot /imu1/data/linear_acceleration/x:y:z /imu2/data/linear_acceler
 ```
 
 
-### Launch files
-
-00. Deactiave conda environments
+## 3. Setting up launch files
+1. Deactivate conda environments
 ```
 conda deactivate
 ```
 
-0. Copy launch files
+2. Copy launch files
 ```
 cd ~/public-engagement-project/software/ros/openzen/launch_files
 pwd
@@ -150,6 +154,7 @@ cd $HOME/catkin_ws/src/openzenros/launch
 cp $PWD/*.launch .
 ```
 
+### Using Launch files 
 1. one sensor 
 ```
 roslaunch openzen_sensor openzen_lpms_b2_one.launch
@@ -160,9 +165,37 @@ roslaunch openzen_sensor openzen_lpms_b2_one.launch
 roslaunch openzen_sensor openzen_lpms_b2_two.launch 
 ```
 
+3. one sensors experimental 
 ```
-rqt_plot rqt_plot /imu1/imu/data/linear_acceleration/x:y:z /imu2/imu/data/linear_acceleration/x:y:z
+roslaunch openzen_sensor openzen_lpms_b2_one_experimental.launch 
 ```
+
+
+
+## Recording and playing data with rosbag and roslaunch
+1. Create path for dataset recordings
+```
+mkdir ~/bagfiles
+cd ~/bagfiles
+```
+
+2. Record data
+```
+roslaunch openzen_sensor lpmsb2-one-display-record.launch 
+```
+
+3. Playback data
+```
+roslaunch openzen_sensor lpmsb2-one-playback-data.launch 
+```
+
+
+
+## TRICKS
+
+* Connect your sensors before you connect other bluetooth devices 
+* If there is a problem with the connection, just simply disconnect the bluetooth dongle and turn it on/off the sensor(s)
+
 
 ## References
 https://bitbucket.org/lpresearch/openzenros/src/master/     
