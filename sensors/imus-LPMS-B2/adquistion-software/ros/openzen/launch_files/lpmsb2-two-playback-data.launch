@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<launch>
+
+	<arg name="path" default="/home/mx19/bagfiles/" />
+	<arg name="file_1_bag" default="_2021-08-11-19-08-02.bag" />
+	<arg name="file_2_bag" default="_2021-08-18-17-57-29.bag" />
+
+	<node 
+		pkg="rosbag" 
+		type="play" 
+		name="player" 
+		output="screen" 
+		args="--clock $(arg path)$(arg file_2_bag)"
+	/>
+
+	<!-- Plot Euler Angles -->
+	<node 
+		name="plot_imu_euler" 
+		pkg="rqt_plot" 
+		type="rqt_plot"
+		args="/rpy_angles_imu1/x:y:z /rpy_angles_imu2/x:y:z " 
+	/>
+
+
+
+</launch>

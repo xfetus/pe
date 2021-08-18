@@ -34,7 +34,7 @@
 		name="plot_imu_euler" 
 		pkg="rqt_plot" 
 		type="rqt_plot"
-		args="/rpy_angles/x:y" 
+		args="/rpy_angles/x:y:z" 
        		if="$(arg plot_euler)" 
 	/>
 
