@@ -183,7 +183,9 @@ cd ~/bagfiles
 Modify launch file arguments `<arg name="record_imus_data" default="false" />` if you do not consider to record data at
 ```
 cd $HOME/catkin_ws/src/openzenros/launch
+
 ```
+
 
 ```
 roslaunch openzen_sensor lpmsb2-one-display-record.launch
