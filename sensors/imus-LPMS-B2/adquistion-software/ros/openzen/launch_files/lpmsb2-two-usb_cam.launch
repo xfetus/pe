@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <!--
-roslaunch openzen_sensor lpmsb2-two-display-record.launch 
+roslaunch openzen_sensor lpmsb2-two-usb_cam.launch
 -->
 <launch>
 
-<arg name="record_imus_data" default="false" />
+<arg name="record_data" default="true" />
 <arg name="plot_euler" default="true" />
 <arg name="plot_quaternions" default="false" />
 <arg name="bags_directory" value="/home/mx19/bagfiles"/>
@@ -41,18 +41,6 @@ roslaunch openzen_sensor lpmsb2-two-display-record.launch
 			" 
 	/>
  
-	<!-- Plot Euler Angles -->
-	<node 
-		name="plot_imu_euler" 
-		pkg="rqt_plot" 
-		type="rqt_plot"
-		args="/rpy_angles_imu1/x:y:z" 
-       		if="$(arg plot_euler)" 
-	/>
-
-
-
-
 </group>
 
 <group ns="imu2">
@@ -86,18 +74,32 @@ roslaunch openzen_sensor lpmsb2-two-display-record.launch
 			" 
 	/>
  
+</group>
+
 	<!-- Plot Euler Angles -->
 	<node 
 		name="plot_imu_euler" 
 		pkg="rqt_plot" 
 		type="rqt_plot"
-		args="/rpy_angles_imu2/x:y:z" 
+		args="/rpy_angles_imu1/x:y:z /rpy_angles_imu2/x:y:z" 
        		if="$(arg plot_euler)" 
 	/>
 
 
-</group>
 
+	<node name="usb_cam" pkg="usb_cam" type="usb_cam_node" output="screen" >
+    		<param name="video_device" value="/dev/video2" />
+    		<param name="image_width" value="640" />
+    		<param name="image_height" value="480" />
+    		<param name="pixel_format" value="yuyv" />
+    		<param name="camera_frame_id" value="usb_cam" />
+    		<param name="io_method" value="mmap"/>
+  	</node>
+
+  	<node name="image_view" pkg="image_view" type="image_view" respawn="false" output="screen">
+    		<remap from="image" to="/usb_cam/image_raw"/>
+    		<param name="autosize" value="true" />
+  	</node>
 
 
    	<!-- Record bag -->
@@ -105,8 +107,8 @@ roslaunch openzen_sensor lpmsb2-two-display-record.launch
 		pkg="rosbag" 
 		type="record" 
 		name="rosbag_record"
-       		args="record -o $(arg bags_directory)/ /rpy_angles_imu1 /rpy_angles_imu2" 
-       		if="$(arg record_imus_data)" 
+       		args="record -o $(arg bags_directory)/ /rpy_angles_imu1 /rpy_angles_imu2 /usb_cam/image_raw" 
+       		if="$(arg record_data)" 
 	/>
 
 
