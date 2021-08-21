@@ -4,9 +4,9 @@ roslaunch openzen_sensor lpmsb2-two-usb_cam.launch
 -->
 <launch>
 
-<arg name="record_data" default="true" />
-<arg name="plot_euler" default="true" />
-<arg name="plot_quaternions" default="false" />
+<arg name="record_data" default="false" />
+<arg name="plot_euler" default="false" />
+<arg name="plot_quaternions" default="true" />
 <arg name="bags_directory" value="/home/mx19/bagfiles"/>
 
 
@@ -17,15 +17,6 @@ roslaunch openzen_sensor lpmsb2-two-usb_cam.launch
     		<param name="sensor_interface" value="Bluetooth" />  
     		<param name="sensor_name" value="00:04:3E:53:ED:58" />  
 	</node>
-
-	<!-- Plot Quaternions -->
-    	<node 
-		name="plot_imu_quaternions" 
-		pkg="rqt_plot" 
-		type="rqt_plot" 
-        	args="/imu1/imu/data/orientation/w:x:y:z" 
-       		if="$(arg plot_quaternions)" 
-	/>
 
 
 	<!-- Quaternion to Euler conversion node --> 
@@ -50,17 +41,6 @@ roslaunch openzen_sensor lpmsb2-two-usb_cam.launch
     		<param name="sensor_name" value="00:04:3E:53:ED:5B" />  
 	</node>
 
-
-	<!-- Plot Quaternions -->
-    	<node 
-		name="plot_imu_quaternions" 
-		pkg="rqt_plot" 
-		type="rqt_plot" 
-        	args="/imu2/imu/data/orientation/w:x:y:z" 
-       		if="$(arg plot_quaternions)" 
-	/>
-
-
 	<!-- Quaternion to Euler conversion node --> 
 	<node 
 		name="quat_to_euler" 
@@ -76,6 +56,16 @@ roslaunch openzen_sensor lpmsb2-two-usb_cam.launch
  
 </group>
 
+	<!-- Plot Quaternions -->
+    	<node 
+		name="plot_imu_quaternions" 
+		pkg="rqt_plot" 
+		type="rqt_plot" 
+        	args="/imu1/imu/data/orientation/w:x:y:z /imu2/imu/data/orientation/w:x:y:z" 
+       		if="$(arg plot_quaternions)" 
+	/>
+
+
 	<!-- Plot Euler Angles -->
 	<node 
 		name="plot_imu_euler" 
@@ -84,6 +74,7 @@ roslaunch openzen_sensor lpmsb2-two-usb_cam.launch
 		args="/rpy_angles_imu1/x:y:z /rpy_angles_imu2/x:y:z" 
        		if="$(arg plot_euler)" 
 	/>
+
 
 
 
@@ -107,10 +98,9 @@ roslaunch openzen_sensor lpmsb2-two-usb_cam.launch
 		pkg="rosbag" 
 		type="record" 
 		name="rosbag_record"
-       		args="record -o $(arg bags_directory)/ /rpy_angles_imu1 /rpy_angles_imu2 /usb_cam/image_raw" 
-       		if="$(arg record_data)" 
+       		args="record -o $(arg bags_directory)/ /rpy_angles_imu1 /rpy_angles_imu2 /imu1/imu/data /imu2/imu/data"
+		if="$(arg record_data)" 
 	/>
-
 
 
 </launch>
