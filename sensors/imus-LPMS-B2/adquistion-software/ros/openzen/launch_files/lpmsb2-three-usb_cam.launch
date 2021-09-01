@@ -5,9 +5,9 @@ roslaunch openzen_sensor lpmsb2-three-usb_cam.launch
 <launch>
 
 <arg name="record_data" default="false" />
-<arg name="plot_euler" default="true" />
-<arg name="plot_quaternions" default="false" />
-<arg name="usbcam" default="false" />
+<arg name="plot_euler" default="false" />
+<arg name="plot_quaternions" default="true" />
+<arg name="usbcam" default="true" />
 <arg name="bags_directory" value="/home/mx19/bagfiles"/>
 
 <group ns="imu1">

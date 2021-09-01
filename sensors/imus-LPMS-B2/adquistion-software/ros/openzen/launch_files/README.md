@@ -3,8 +3,8 @@
 1. Copy launch files from repo to `catkin_ws`
 ```
 cd $HOME/$REPO_PATH 
-cd public-engagement-project/sensors/imus-LPMS-B2/adquistion-software/ros/openzen/launch_files
-bash copy-launchs-to-catkin_ws.bash
+cd sensors/imus-LPMS-B2/adquistion-software/ros/openzen/launch_files
+bash bash_copy-launchs-to-catkin_ws.bash
 ```
 
 2. Setup Hardware
@@ -17,10 +17,15 @@ bash copy-launchs-to-catkin_ws.bash
 roslaunch openzen_sensor lpmsb2-two-usb_cam.launch
 ```
 
-4. After debugging 
+4. Debugging lauch lifes 
+```
+cd $HOME/catkin_ws/src/openzenros/launch
+vim *.yml
+```
+copy files to remote repo
 ```
 cd $HOME/$REPO_PATH 
-cd public-engagement-project/sensors/imus-LPMS-B2/adquistion-software/ros/openzen/launch_files
-bash copy-launchs-from-catkin_ws-to-repo.bash
+cd sensors/imus-LPMS-B2/adquistion-software/ros/openzen/launch_files
+bash bash_copy-launchs-from-catkin_ws-to-repo.bash
 ```
 
