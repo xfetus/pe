@@ -6,6 +6,7 @@ bash a_download-untar.bash
 ```
 
 * [dependencies](b_dependencies.bash)
+**NOTE** This was not necesary for Ubuntu20.04
 ```
 bash b_dependencies.bash
 ```
