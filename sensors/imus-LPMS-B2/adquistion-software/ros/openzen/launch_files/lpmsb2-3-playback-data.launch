@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!--
+roslaunch openzen_sensor lpmsb2-3-playback-data.launch
+-->
+<launch>
+
+	<arg name="path" default="/home/mx19/datasets/bagfiles/" />
+	<arg name="plot_euler" default="false" />
+	<arg name="plot_quaternions" default="true" />
+	<arg name="rqt_image_view" default="false" />
+	<arg name="file_01_bag" default="_2021-08-11-19-08-02.bag" />
+	<arg name="file_02_bag" default="_2021-08-18-17-57-29.bag" />
+	<arg name="file_03_bag" default="_2021-08-19-00-49-41.bag" />
+	<arg name="file_04_bag" default="_2021-08-21-12-50-19.bag" />
+	<arg name="file_05_bag" default="_2021-08-30-18-26-01.bag" />
+	<arg name="file_06_bag" default="_2021-09-04-17-29-39.bag" />
+	
+	<node 
+		pkg="rosbag" 
+		type="play" 
+		name="player" 
+		output="screen" 
+		args="--clock $(arg path)$(arg file_06_bag)"
+	/>
+
+	<!-- Plot Euler Angles -->
+	<node 
+		name="plot_imu_euler" 
+		pkg="rqt_plot" 
+		type="rqt_plot"
+		args="/rpy_angles_imu_s0/x:y:z /rpy_angles_imu_s1/x:y:z /rpy_angles_imu_s2/x:y:z"
+       		if="$(arg plot_euler)" 
+	/>
+
+
+	<!-- Plot Quaternions -->
+    	<node 
+		name="plot_imu_quaternions" 
+		pkg="rqt_plot" 
+		type="rqt_plot" 
+        	args="/imu_s0/imu/data/orientation/w:x:y:z /imu_s1/imu/data/orientation/w:x:y:z /imu_s2/imu/data/orientation/w:x:y:z" 
+       		if="$(arg plot_quaternions)" 
+	/>
+
+
+  	<node 
+		name="image_view" 
+		pkg="rqt_image_view" 
+		type="rqt_image_view"
+		args="/usb_cam/image_raw"
+       		if="$(arg rqt_image_view)" 
+	/>
+
+
+</launch>

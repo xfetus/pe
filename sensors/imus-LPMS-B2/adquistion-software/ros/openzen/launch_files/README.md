@@ -21,8 +21,18 @@ roslaunch openzen_sensor lpmsb2-two-usb_cam.launch
 ```
 cd $HOME/catkin_ws/src/openzenros/launch
 vim *.yml
+
+CHANGE THIS TO TRUE
+<arg name="record_data" default="false" />
+
 ```
-copy files to remote repo
+
+3. Recording launch files
+``` 
+roslaunch openzen_sensor lpmsb2-two-usb_cam.launch
+```
+
+4. copy files to remote repo
 ```
 cd $HOME/$REPO_PATH 
 cd sensors/imus-LPMS-B2/adquistion-software/ros/openzen/launch_files
