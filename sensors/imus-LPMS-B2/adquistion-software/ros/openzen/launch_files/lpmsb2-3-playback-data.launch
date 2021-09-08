@@ -14,13 +14,14 @@ roslaunch openzen_sensor lpmsb2-3-playback-data.launch
 	<arg name="file_04_bag" default="_2021-08-21-12-50-19.bag" />
 	<arg name="file_05_bag" default="_2021-08-30-18-26-01.bag" />
 	<arg name="file_06_bag" default="_2021-09-04-17-29-39.bag" />
+	<arg name="file_07_bag" default="_2021-09-08-19-55-19.bag" />
 	
 	<node 
 		pkg="rosbag" 
 		type="play" 
 		name="player" 
 		output="screen" 
-		args="--clock $(arg path)$(arg file_06_bag)"
+		args="--clock $(arg path)$(arg file_07_bag)"
 	/>
 
 	<!-- Plot Euler Angles -->
