@@ -1,10 +1,10 @@
-
+# Data Collection
 
 ## Recording and playing data with rosbag and roslaunch
 1. Create path for dataset recordings
 ```
-mkdir ~/bagfiles
-cd ~/bagfiles
+mkdir -p $HOME/datasets/bagfiles
+cd $HOME/datasets/bagfiles
 ```
 
 
@@ -15,6 +15,9 @@ cd ~/bagfiles
 
 2. Debugging lauch lifes 
 ```
+cd $REPO_PATH/sensors/imus-LPMS-B2/adquistion-software/ros/openzen/launch_files
+bash bash_copy-launchs-to-catkin_ws.bash
+## Open a new terminal
 cd $HOME/catkin_ws/src/openzenros/launch
 vim lpmsb2-3-usb_cam.launch
 ```
