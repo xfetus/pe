@@ -12,7 +12,12 @@ The anticipated outcomes of the project are the creation of mutual benefit betwe
 In addition, such activities will help to engage with other researchers and clinicians that might spark collaboration and the potential usage of the current activities in future events targeting other type of audiences.
 
 ## Slides
-[![GitHub Actions Status](https://github.com/ofetus/us-simulator/workflows/Compiling-TeX-Slides/badge.svg)](https://github.com/ofetus/us-simulator/actions) [![slides](https://img.shields.io/badge/see-slides-blue.svg)](https://github.com/ofetus/us-simulator/blob/pdfs/slides.pdf) [LaTeX-project](documents/slides)    
+
+### Westminster Enterprise Week - November 2021
+[![GitHub Actions Status](https://github.com/xfetus/public-engagement-project/workflows/Compiling-TeX-Slides/badge.svg)](https://github.com/xfetus/public-engagement-project/actions) [![slides](https://img.shields.io/badge/see-slides-blue.svg)](https://github.com/xfetus/public-engagement-project/blob/pdfs/slides-wek2021.pdf) [LaTeX-project](documents/slides/WEK2021)
+
+### King's Health Partners Summer School - July 2021
+[![GitHub Actions Status](https://github.com/xfetus/public-engagement-project/workflows/Compiling-TeX-Slides/badge.svg)](https://github.com/xfetus/public-engagement-project/actions) [![slides](https://img.shields.io/badge/see-slides-blue.svg)](https://github.com/ofetus/us-simulator/blob/pdfs/slides.pdf) [LaTeX-project](documents/slides/KHPSS2021)    
 
 ![fig](documents/slides/figures/screenshots/Screenshot-from-2021-07-09-02-32-26.png)
 
