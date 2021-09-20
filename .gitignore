@@ -11,3 +11,20 @@
 ## temporal md files or others
 **/*.md.swp
 **/*.swp
+
+## temporal TeX files
+**/*.aux
+**/*.bbl
+**/*.bcf
+**/*.blg
+**/*.fdb_latexmk
+**/*.fls
+**/*.log
+**/*.nav
+**/*.run.xml
+**/*.snm
+**/*.synctex.gz
+**/*.toc
+**/*.vrb
+**/*.out
+**/main.pdf
