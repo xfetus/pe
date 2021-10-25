@@ -42,7 +42,7 @@ freecad week-12-growing-baby-f005.stl # Choose gesture navigation style; and scr
 ```
 
 * See mesh outputs in github
-Open stl-files in your browser (e.g., [stl-files/meshes-factor-f005](stl-files/meshes-factor-f005)). 
+Open stl-files in your browser (e.g., [stl-files/meshes-factor-f005](../stl-files/meshes-factor-f005)). 
 
 ## CADs molds in Tinkercad 
 Open stl files in https://www.tinkercad.com (you need to create an account) and made changes to your cad files as shown below.
