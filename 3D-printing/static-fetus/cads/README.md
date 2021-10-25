@@ -1,4 +1,4 @@
-# CAD files
+# Computer-aided designs (cads)
 ## Content 
 * [Freecad](freecad)
 * [molds](molds)
