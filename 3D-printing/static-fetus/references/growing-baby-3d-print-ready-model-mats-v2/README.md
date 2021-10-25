@@ -1,4 +1,5 @@
 # Fetal Development
+![fig](tom-davis-3d-printed-models-in-a-circle.jpg)
 
 ## Week 01 to 40
 ![fig](week-01-04.png)
