@@ -50,10 +50,15 @@ Open stl files in https://www.tinkercad.com (you need to create an account) and 
 **Fig 1.** CAD file at https://www.tinkercad.com/things/aK8zw1Kpa4C-surprising-fyyran-bigery/edit which STL files are [here](stl-files).     
 
 ### Notes   
-Shu Wang pointed out few recommendations for CADs
-* the common way to create molds is using TinkerCAD.
-* The mold for fetus can be done in one piece.
-* The mold requires one hole at the top of the mold to inject material.  
+* Shu Wang pointed out few recommendations for CADs
+	* the common way to create molds is using TinkerCAD.
+	* The mold for fetus can be done in one piece.
+	* The mold requires one hole at the top of the mold to inject material.  
+
+* Maleeha Al-Hamadani made the following comments on Wed  3 Nov 17:25:47 GMT 2021
+	* the use of https://www.meshmixer.com/ would create smoother and more accurate messhes than those created with cura.
+	* Another software for meshes can be https://www.meshlab.net/
+
 
 ## References
 * http://yuichitamiya.fabcloud.io/fabacademy2020/projects/freecad_stl_step/
