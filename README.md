@@ -1,4 +1,4 @@
-# Finding a fETus with UltraSound (FETUS)
+# :microscope: Public Engagement Project: Finding a fETus with UltraSound (FETUS)
 The aim of the FETUS project is to increase the awareness of young people, living in Southwark and Lambeth with the involvement of The Young Persons’ Advisory Group (YPAG), on what biomedical engineers do and the impact they make to society.
 Similarly, we aim that young audiences get a better understanding of the diversity of jobs in healthcare, as well as develop their interests in STEM areas. 
 We will achieve this through creative and interactive public engagement activities that explore our research in the areas of surgery and interventional engineering (e.g., soft materials, mechanics and robotics).
@@ -28,7 +28,7 @@ In addition, such activities will help to engage with other researchers and clin
 ## Clone repo
 After generating your SSH keys as suggested [here](https://github.com/mxochicale/tools/blob/main/github/SSH.md), you can then clone the repository by typing (or copying) the following line in a terminal at your selected path in your machine:
 ```
-git clone git@github.com:xfetus/public-engagement-project.git
+git clone git@github.com:xfetus/pe.git
 ```
 
 ## Contributors
@@ -46,6 +46,7 @@ Thanks goes to all these people ([emoji key](https://allcontributors.org/docs/en
     <td align="center"><a href="https://github.com/RoyoTLH"><img src="https://avatars1.githubusercontent.com/u/52458697?v=4?s=100" width="100px;" alt=""/><br /><sub><b> Zhanchong Ou </b></sub>        </a><br /><a href="https://github.com/xfetus/public-engagement-project/commits?author=" title="Code">💻</a></td>
     <td align="center"><a href="https://twitter.com/bella9spencer"><img src="https://avatars1.githubusercontent.com/u/23114020?v=4?s=100" width="100px;" alt=""/><br /><sub><b> Bella Spencer </b></sub>        </a><br /><a href="https://github.com/xfetus/public-engagement-project/commits?author=" title="Research">  🔬 🤔  </a></td>
     <td align="center"><a href="https://github.com/tardaw"><img src="https://avatars1.githubusercontent.com/u/85352715?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Dawood Tareen </b></sub>        </a><br /><a href="https://github.com/xfetus/public-engagement-project/commits?author=" title="Research">  🔬 🤔  </a></td>
+    <td align="center"><a href="https://github.com/Guilherme-GDF"><img src="https://avatars1.githubusercontent.com/u/85799328?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Guillerme Gomes De Figueiredo </b></sub>        </a><br /><a href="https://github.com/xfetus/public-engagement-project/commits?author=" title="3D-printing">  🔬 🤔  </a></td>
   </tr>
 </table>
 <!-- markdownlint-restore -->
