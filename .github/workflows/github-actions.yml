@@ -4,11 +4,12 @@ on:
     branches:
       - main
       - 01-final-run-through
+      - 12-slides-WEK
       - $ADD_ISSUENUMER_NAME
 
 jobs:
   build:
-    if: "contains(github.event.head_commit.message, 'CI-SLIDES')"
+    if: "contains(github.event.head_commit.message, 'CITEX')"
     runs-on: ubuntu-latest
     steps:
 
@@ -19,11 +20,11 @@ jobs:
       uses: xu-cheng/latex-action@v2
       with:
         root_file: main.tex
-        working_directory: documents/slides
+        working_directory: documents/slides/WEK2021
 
     - name: Check pdf files
       run: |
-        file documents/slides/main.pdf | grep -q ' PDF '
+        file documents/slides/WEK2021/main.pdf | grep -q ' PDF '
  
     - name: Upload
       run: |
@@ -36,11 +37,11 @@ jobs:
         echo "$DEPLOY_KEY" > ~/.ssh/id_rsa
         chmod 600 ~/.ssh/id_rsa
         git config --global core.sshCommand "ssh -i ~/.ssh/id_rsa -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
-        git clone --depth=1 --branch pdfs git@github.com:ofetus/us-simulator.git "$GITHUB_WORKSPACE/deploy"
-        cp -f documents/slides/main.pdf "$GITHUB_WORKSPACE/deploy/slides.pdf"
+        git clone --depth=1 --branch pdfs git@github.com:xfetus/public-engagement-project.git "$GITHUB_WORKSPACE/deploy"
+        cp -f documents/slides/WEK2021/main.pdf "$GITHUB_WORKSPACE/deploy/slides-wek2021.pdf"
         cd "$GITHUB_WORKSPACE/deploy"
-        git add slides.pdf 
-        git commit -m "latex-action deploy"
+        git add slides-wek2021.pdf
+        git commit -m github.event.head_commit.message
         git push
       env:
         DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}

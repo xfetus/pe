@@ -25,11 +25,12 @@ sudo apt-get install pdf-presenter-console
 ```
 ### local build
 ``` 
+cd $HOME/repositories/xfetus/public-engagement-project/documents/slides/WEK2021/
 bash local-tex-build.bash
 ```
 ### view slides 
 ``` 
-cd $HOME/~/FETUS/us-simulator/documents/slides
+cd $HOME/repositories/xfetus/public-engagement-project/slides/WEK2021/
 # use -w to run in windowed mode
 pdfpc -w main.pdf
 ```

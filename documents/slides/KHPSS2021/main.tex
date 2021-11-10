@@ -1,0 +1,66 @@
+\documentclass[xcolor={dvipsnames},aspectratio=169,10pt]{beamer}
+\usefonttheme{serif}
+
+\makeatletter
+  \def\beamer@calltheme#1#2#3{%
+    \def\beamer@themelist{#2}
+    \@for\beamer@themename:=\beamer@themelist\do
+    {\usepackage[{#1}]{\beamer@themelocation/#3\beamer@themename}}}
+
+  \def\usefolder#1{
+    \def\beamer@themelocation{#1}
+  }
+  \def\beamer@themelocation{}
+%%REF: https://tex.stackexchange.com/questions/275600/beamer-themes-on-custom-folder
+
+\usefolder{../beamer_files}
+\usetheme{mx}
+
+
+
+\title{Finding a fETus with UltraSound (FETUS)}
+\subtitle{King's Health Partners Summer School {\bf \#2021} }
+\author{
+Shu Wang, Ou Zhanchong, Tareen Dawood and \\
+    {\bf Miguel Xochicale}
+}
+\date{
+%King's Health Partners Summer School \\
+6th July 2021
+}
+\institute{
+	\faEnvelope miguel.xochicale@kcl.ac.uk \\
+	\faGithubAlt @mxochicale \faTwitter @\_mxochicale
+		}
+\githubrepository{https://github.com/xfetus/us-simulator}
+
+\begin{document}
+
+{
+  \usebackgroundtemplate{\includegraphics[width=\paperwidth]{./../figures/background-for-titlepage/versions/drawing-v02.png}}%
+  \maketitle
+}
+
+
+\begin{frame}{Contents}
+    \tableofcontents
+\end{frame}
+
+\input{../content-tex/where-who-why}
+\input{../content-tex/fetus}
+\input{../content-tex/medical-imaging}
+\input{../content-tex/applications}
+\input{../content-tex/conclusions-future-work}
+
+%\begin{frame}[standout]
+%  Thanks \\
+%  Questions?
+%\end{frame}
+
+{
+  \usebackgroundtemplate{\includegraphics[width=\paperwidth]{./../figures/background-for-titlepage/versions/drawing-v02.png}}%
+  \maketitle
+}
+
+
+\end{document}
