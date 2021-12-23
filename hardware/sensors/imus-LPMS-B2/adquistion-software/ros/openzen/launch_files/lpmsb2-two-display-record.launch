@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<!--
+roslaunch openzen_sensor lpmsb2-two-display-record.launch 
+-->
+<launch>
+
+<arg name="record_imus_data" default="false" />
+<arg name="plot_euler" default="true" />
+<arg name="plot_quaternions" default="false" />
+<arg name="bags_directory" value="/home/mx19/bagfiles"/>
+
+
+
+<group ns="imu1">
+    	<!-- B2 Sensor node -->
+    	<node name="b2_node_ed58" pkg="openzen_sensor" type="openzen_sensor_node">
+    		<param name="sensor_interface" value="Bluetooth" />  
+    		<param name="sensor_name" value="00:04:3E:53:ED:58" />  
+	</node>
+
+	<!-- Plot Quaternions -->
+    	<node 
+		name="plot_imu_quaternions" 
+		pkg="rqt_plot" 
+		type="rqt_plot" 
+        	args="/imu1/imu/data/orientation/w:x:y:z" 
+       		if="$(arg plot_quaternions)" 
+	/>
+
+
+	<!-- Quaternion to Euler conversion node --> 
+	<node 
+		name="quat_to_euler" 
+		pkg="topic_tools" 
+		type="transform"
+        	args=	"	
+			/imu1/imu/data/orientation 
+			/rpy_angles_imu1 geometry_msgs/Vector3 
+			'tf.transformations.euler_from_quaternion([m.x, m.y, m.z, m.w])' 
+			--import tf
+			" 
+	/>
+ 
+	<!-- Plot Euler Angles -->
+	<node 
+		name="plot_imu_euler" 
+		pkg="rqt_plot" 
+		type="rqt_plot"
+		args="/rpy_angles_imu1/x:y:z" 
+       		if="$(arg plot_euler)" 
+	/>
+
+
+
+
+</group>
+
+<group ns="imu2">
+    	<!-- B2 Sensor node -->
+    	<node name="b2_node_ed5B" pkg="openzen_sensor" type="openzen_sensor_node">
+    		<param name="sensor_interface" value="Bluetooth" />  
+    		<param name="sensor_name" value="00:04:3E:53:ED:5B" />  
+	</node>
+
+
+	<!-- Plot Quaternions -->
+    	<node 
+		name="plot_imu_quaternions" 
+		pkg="rqt_plot" 
+		type="rqt_plot" 
+        	args="/imu2/imu/data/orientation/w:x:y:z" 
+       		if="$(arg plot_quaternions)" 
+	/>
+
+
+	<!-- Quaternion to Euler conversion node --> 
+	<node 
+		name="quat_to_euler" 
+		pkg="topic_tools" 
+		type="transform"
+        	args=	"	
+			/imu2/imu/data/orientation 
+			/rpy_angles_imu2 geometry_msgs/Vector3 
+			'tf.transformations.euler_from_quaternion([m.x, m.y, m.z, m.w])' 
+			--import tf
+			" 
+	/>
+ 
+	<!-- Plot Euler Angles -->
+	<node 
+		name="plot_imu_euler" 
+		pkg="rqt_plot" 
+		type="rqt_plot"
+		args="/rpy_angles_imu2/x:y:z" 
+       		if="$(arg plot_euler)" 
+	/>
+
+
+</group>
+
+
+
+   	<!-- Record bag -->
+ 	<node 
+		pkg="rosbag" 
+		type="record" 
+		name="rosbag_record"
+       		args="record -o $(arg bags_directory)/ /rpy_angles_imu1 /rpy_angles_imu2" 
+       		if="$(arg record_imus_data)" 
+	/>
+
+
+
+</launch>

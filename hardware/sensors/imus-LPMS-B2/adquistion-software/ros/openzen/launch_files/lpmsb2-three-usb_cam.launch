@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<!--
+roslaunch openzen_sensor lpmsb2-three-usb_cam.launch
+-->
+<launch>
+
+<arg name="record_data" default="false" />
+<arg name="plot_euler" default="false" />
+<arg name="plot_quaternions" default="true" />
+<arg name="usbcam" default="true" />
+<arg name="bags_directory" value="/home/mx19/bagfiles"/>
+
+<group ns="imu1">
+    	<!-- B2 Sensor node -->
+    	<node name="b2_node_ed5B" pkg="openzen_sensor" type="openzen_sensor_node">
+    		<param name="sensor_interface" value="Bluetooth" />  
+    		<param name="sensor_name" value="00:04:3E:53:ED:5B" />  
+	</node>
+
+	<!-- Quaternion to Euler conversion node --> 
+	<node 
+		name="quat_to_euler" 
+		pkg="topic_tools" 
+		type="transform"
+        	args=	"	
+			/imu1/imu/data/orientation 
+			/rpy_angles_imu1 geometry_msgs/Vector3 
+			'tf.transformations.euler_from_quaternion([m.x, m.y, m.z, m.w])' 
+			--import tf
+			" 
+	/>
+ 
+</group>
+
+
+<group ns="imu2">
+    	<!-- B2 Sensor node -->
+    	<node name="b2_node_ed58" pkg="openzen_sensor" type="openzen_sensor_node">
+    		<param name="sensor_interface" value="Bluetooth" />  
+    		<param name="sensor_name" value="00:04:3E:53:ED:58" />  
+	</node>
+
+
+	<!-- Quaternion to Euler conversion node --> 
+	<node 
+		name="quat_to_euler" 
+		pkg="topic_tools" 
+		type="transform"
+        	args=	"	
+			/imu2/imu/data/orientation 
+			/rpy_angles_imu2 geometry_msgs/Vector3 
+			'tf.transformations.euler_from_quaternion([m.x, m.y, m.z, m.w])' 
+			--import tf
+			" 
+	/>
+ 
+</group>
+
+<group ns="imu3">
+    	<!-- B2 Sensor node -->
+    	<node name="b2_node_ed7E" pkg="openzen_sensor" type="openzen_sensor_node">
+    		<param name="sensor_interface" value="Bluetooth" />  
+    		<param name="sensor_name" value="00:04:3E:6F:37:7E" />  
+	</node>
+
+	<!-- Quaternion to Euler conversion node --> 
+	<node 
+		name="quat_to_euler" 
+		pkg="topic_tools" 
+		type="transform"
+        	args=	"	
+			/imu3/imu/data/orientation 
+			/rpy_angles_imu3 geometry_msgs/Vector3 
+			'tf.transformations.euler_from_quaternion([m.x, m.y, m.z, m.w])' 
+			--import tf
+			" 
+	/>
+ 
+</group>
+
+
+
+	<!-- Plot Quaternions -->
+    	<node 
+		name="plot_imu_quaternions" 
+		pkg="rqt_plot" 
+		type="rqt_plot" 
+        	args="/imu1/imu/data/orientation/w:x:y:z /imu2/imu/data/orientation/w:x:y:z /imu3/imu/data/orientation/w:x:y:z" 
+       		if="$(arg plot_quaternions)" 
+	/>
+
+
+	<!-- Plot Euler Angles -->
+	<node 
+		name="plot_imu_euler" 
+		pkg="rqt_plot" 
+		type="rqt_plot"
+		args="/rpy_angles_imu1/x:y:z /rpy_angles_imu2/x:y:z /rpy_angles_imu3/x:y:z"
+       		if="$(arg plot_euler)" 
+	/>
+
+
+	<node 	name="usb_cam" 
+		pkg="usb_cam" 
+		type="usb_cam_node" 
+		output="screen"
+		if="$(arg usbcam)" 
+		>
+    		<param name="video_device" value="/dev/video2" />
+    		<param name="image_width" value="640" />
+    		<param name="image_height" value="480" />
+    		<param name="pixel_format" value="yuyv" />
+    		<param name="camera_frame_id" value="usb_cam" />
+    		<param name="io_method" value="mmap"/>
+  	</node>
+
+  	<node name="image_view" pkg="image_view" type="image_view" respawn="false" output="screen">
+    		<remap from="image" to="/usb_cam/image_raw"/>
+    		<param name="autosize" value="true" />
+  	</node>
+
+
+   	<!-- Record bag -->
+ 	<node 
+		pkg="rosbag" 
+		type="record" 
+		name="rosbag_record"
+       		args="record -o $(arg bags_directory)/ /rpy_angles_imu1 /rpy_angles_imu2 /rpy_angles_imu3 /imu1/imu/data /imu2/imu/data /imu3/imu/data"
+		if="$(arg record_data)" 
+	/>
+
+
+</launch>
+
+
