@@ -56,7 +56,7 @@ Open stl files in https://www.tinkercad.com (you need to create an account) and 
 	* The mold requires one hole at the top of the mold to inject material.  
 	
 
-## CADs by Maleeha Al-Hamadani
+## CADs by Maleeha Al-Hamadani (Oct/Nov2021)
 ### CADs
 ![f](../../../../documents/slides/figures/3d-printing/cads-prints/versions/drawing-v02.png)
 
@@ -66,6 +66,9 @@ See rendered [stl-files](stl-files/) in github.
 * Maleeha Al-Hamadani made the following comments on Wed  3 Nov 17:25:47 GMT 2021
     * the use of https://www.meshmixer.com/ would create smoother and more accurate messhes than those created with cura.
     * Another software for meshes can be https://www.meshlab.net/
+
+## CADs by Miguel Xochicale and prints by Marty Rajaratnam (March 2022)
+
 
 
 ## References
