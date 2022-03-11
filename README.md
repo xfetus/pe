@@ -17,6 +17,7 @@ In addition, such activities will help to engage with other researchers and clin
 [![GitHub Actions Status](https://github.com/xfetus/public-engagement-project/workflows/Compiling-TeX-Slides/badge.svg)](https://github.com/xfetus/public-engagement-project/actions) 
 
 <div style="width: 50%; height: 50%">
+
 [ ![fig](documents/slides/figures/README/Screenshot-from-2022-03-11-09-01-45.png)](https://github.com/xfetus/pe/blob/pdfs/slides-WSW2022.pdf)
 </div>
 
