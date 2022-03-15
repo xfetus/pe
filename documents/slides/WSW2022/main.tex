@@ -1,0 +1,67 @@
+\documentclass[xcolor={dvipsnames},aspectratio=169,10pt]{beamer}
+\usefonttheme{serif}
+
+\makeatletter
+  \def\beamer@calltheme#1#2#3{%
+    \def\beamer@themelist{#2}
+    \@for\beamer@themename:=\beamer@themelist\do
+    {\usepackage[{#1}]{\beamer@themelocation/#3\beamer@themename}}}
+
+  \def\usefolder#1{
+    \def\beamer@themelocation{#1}
+  }
+  \def\beamer@themelocation{}
+%%REF: https://tex.stackexchange.com/questions/275600/beamer-themes-on-custom-folder
+
+\usefolder{../beamer_files}
+\usetheme{mx}
+
+
+
+\title{Finding a fETus with UltraSound (FETUS)}
+\subtitle{Westminster STEAM Week {\bf \#WSW2022} }
+\author{
+  Thea Bautista, Goosie Leung and \\
+  {\bf Miguel Xochicale}
+}
+\date{
+15th March 2022
+}
+\institute{
+	\faEnvelope \hspace{1mm}  miguel.xochicale@kcl.ac.uk \\
+	\faGithubAlt \hspace{1mm}  @mxochicale
+    \faTwitter \hspace{1mm}  @\_mxochicale
+		}
+\githubrepository{https://github.com/xfetus/pe}
+
+\begin{document}
+
+{
+  \usebackgroundtemplate{\includegraphics[width=\paperwidth]{./../figures/background-for-titlepage/versions/drawing-v03.png}}
+  \maketitle
+}
+
+
+\begin{frame}{Contents}
+    \tableofcontents
+\end{frame}
+
+\input{../content-tex/steam-week}
+\input{../content-tex/fetal-growth}
+\input{../content-tex/medical-imaging}
+%\input{../content-tex/multidisciplinary-team-in-healthcare}
+\input{../content-tex/applications}
+\input{../content-tex/takeaways-popquiz}
+
+%\begin{frame}[standout]
+%  Thanks \\
+%  Questions?
+%\end{frame}
+
+{
+  \usebackgroundtemplate{\includegraphics[width=\paperwidth]{./../figures/background-for-titlepage/versions/drawing-v03.png}}
+  \maketitle
+}
+
+
+\end{document}
