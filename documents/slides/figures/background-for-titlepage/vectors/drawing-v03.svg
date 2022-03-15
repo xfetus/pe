@@ -13,8 +13,8 @@
    viewBox="0 0 317.5 179.91666"
    version="1.1"
    id="svg8"
-   inkscape:version="1.0.2 (1.0.2+r75+1)"
-   sodipodi:docname="drawing-v02.svg">
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
+   sodipodi:docname="drawing-v03.svg">
   <defs
      id="defs2">
     <marker
@@ -170,16 +170,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.37595913"
-     inkscape:cx="326.36851"
-     inkscape:cy="290.40211"
+     inkscape:zoom="0.75191826"
+     inkscape:cx="-59.232638"
+     inkscape:cy="545.47694"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1920"
-     inkscape:window-height="1025"
+     inkscape:window-width="3000"
+     inkscape:window-height="1872"
      inkscape:window-x="0"
-     inkscape:window-y="27"
+     inkscape:window-y="54"
      inkscape:window-maximized="1"
      showguides="true"
      units="px"
@@ -220,15 +220,15 @@
        y="316.95462" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.11205px;line-height:1.25;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0370419"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.11205006px;line-height:1.25;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0370419"
        x="6.3154449"
        y="59.683979"
        id="text51"><tspan
          sodipodi:role="line"
          x="6.3154449"
          y="59.683979"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:50.8px;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;stroke-width:0.0370419"
-         id="tspan838">v02</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:50.79999924px;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;stroke-width:0.0370419"
+         id="tspan838">v03</tspan></text>
     <text
        id="text55"
        y="175.73384"
@@ -406,6 +406,6 @@
        x="552.37823"
        y="144.86844"
        clip-path="url(#clipPath947)"
-       transform="translate(-396.85712,-23.893318)" />
+       transform="matrix(1.145595,0,0,1.145595,-507.00203,-52.163344)" />
   </g>
 </svg>
