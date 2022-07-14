@@ -13,8 +13,8 @@ In addition, such activities will help to engage with other researchers and clin
 
 ### N03 - Westminster STEAM Week on 15th March 2022
 [![slides](https://img.shields.io/badge/see-slides-blue.svg)](https://github.com/xfetus/public-engagement-project/blob/pdfs/slides-WSW2022.pdf) 
-[![LaTeX-project](https://img.shields.io/badge/see-LaTeXproject-yellow.svg)](documents/slides/WSW2022) 
 [![GitHub Actions Status](https://github.com/xfetus/public-engagement-project/workflows/Compiling-TeX-Slides/badge.svg)](https://github.com/xfetus/public-engagement-project/actions) 
+[![LaTeX-project](https://img.shields.io/badge/see-LaTeXproject-yellow.svg)](documents/slides/WSW2022) 
 
 <div style="width: 50%; height: 50%">
 
@@ -23,6 +23,7 @@ In addition, such activities will help to engage with other researchers and clin
 
 ### N02 - Westminster Enterprise Week on 10th November 2021
 [![GitHub Actions Status](https://github.com/xfetus/public-engagement-project/workflows/Compiling-TeX-Slides/badge.svg)](https://github.com/xfetus/public-engagement-project/actions) [![slides](https://img.shields.io/badge/see-slides-blue.svg)](https://github.com/xfetus/public-engagement-project/blob/pdfs/slides-wek2021.pdf) [![LaTeX-project](https://img.shields.io/badge/see-LaTeXproject-yellow.svg)](documents/slides/WEK2021) [![blog](https://img.shields.io/badge/read-blog-orange.svg)](documents/blogs/22-DEC-2021) 
+
 <div style="width: 60%; height: 60%">
 
 [ ![fig](documents/slides/figures/README/Screenshot-from-2021-10-20-14-56-08.png)](https://github.com/xfetus/public-engagement-project/blob/pdfs/slides-wek2021.pdf)
@@ -30,6 +31,7 @@ In addition, such activities will help to engage with other researchers and clin
 
 ### N01 - King's Health Partners Summer School on 6th July 2021
 [![GitHub Actions Status](https://github.com/xfetus/public-engagement-project/workflows/Compiling-TeX-Slides/badge.svg)](https://github.com/xfetus/public-engagement-project/actions) [![slides](https://img.shields.io/badge/see-slides-blue.svg)](https://github.com/ofetus/us-simulator/blob/pdfs/slides.pdf) [![LaTeX-project](https://img.shields.io/badge/see-LaTeXproject-yellow.svg)](documents/slides/KHPSS2021) 
+
 <div style="width: 60%; height: 60%">
 
 [ ![fig](documents/slides/figures/README/Screenshot-from-2021-07-09-02-32-26.png)](https://github.com/xfetus/public-engagement-project/blob/pdfs/slides.pdf)
